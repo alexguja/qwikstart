@@ -17,7 +17,10 @@ export default component$(() => {
       <p>
         <label>
           GitHub organization:
-          <input value="QwikDev" />
+          <input
+            value="github.org"
+            onInput$={(ev, el) => (github.org = el.value)} // Update the store when the input changes.
+          />
         </label>
       </p>
       <section>
