@@ -1,6 +1,12 @@
 import { component$, useStore } from "@builder.io/qwik";
 
 export default component$(() => {
+  // useStore is used to
+  // - Store the state of the component
+  // - Present the state as a proxy that can observe read/writes to the store
+  // - Serialize the state of the store into JSON on application pause.
+  // - Observe which properties of the store are used in a component template and create subscriptions to the store.
+  //   The subscriptions are then used to automatically update the component template if a store changes.
   const github = useStore({
     org: "QwikDev",
     repos: ["qwik", "partytown"] as string[] | null,
