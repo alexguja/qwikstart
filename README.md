@@ -63,3 +63,9 @@ The production build will generate client and server modules by running both cli
 ```shell
 pnpm build # or `pnpm build`
 ```
+
+
+## Notes
+
+One of Qwik's super powers lies in its lazy-loading features. Each component will generate a separate Symbol which is downloaded on demand.
+This allows you to build a large application with many components and only download the components that are needed for the current view.
