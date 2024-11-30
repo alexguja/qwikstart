@@ -8,6 +8,8 @@ export default component$(() => {
   );
 });
 
+// Note: If component$ is removed below
+// the component will be inlined with the component above
 export const Greeter = component$(() => {
   return <div>Hello World!</div>;
 });
